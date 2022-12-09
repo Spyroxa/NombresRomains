@@ -7,6 +7,7 @@
             {
                 1 => UnitéRomaine.Unité.Représenter(nombreArabe),
                 2 => "II",
+                3 => "III",
                 _ => throw new NotImplementedException()
             };
     }
