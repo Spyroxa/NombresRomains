@@ -432,5 +432,17 @@ namespace NombresRomains.Test
             // ALORS on obtient 'XXIX'
             Assert.Equal("XXIX", resultat);
         }
+        [Fact]
+        public void Test30()
+        {
+            // ETANT DONNE le nombre 30
+            const int nombreArabe = 30;
+
+            // QUAND on le convertit en nombres romains
+            var resultat = ConvertisseurNombreRomains.Convertir(nombreArabe);
+
+            // ALORS on obtient 'XXX'
+            Assert.Equal("XXX", resultat);
+        }
     }
 }
