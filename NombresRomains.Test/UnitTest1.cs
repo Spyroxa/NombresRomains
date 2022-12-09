@@ -2,39 +2,39 @@ namespace NombresRomains.Test
 {
     public class UnitTest1
     {
-        [Fact]
-        public void Test1()
-        {
-            // ETANT DONNE un nombre 1
-            const int nombreArabe = 1;
-            // QUAND on le convertit en nombres romains
-            var resultat = ConvertisseurNombreRomains.Convertir(nombreArabe);
+        //[Fact]
+        //public void Test1()
+        //{
+        //    // ETANT DONNE un nombre 1
+        //    const int nombreArabe = 1;
+        //    // QUAND on le convertit en nombres romains
+        //    var resultat = ConvertisseurNombreRomains.Convertir(nombreArabe);
 
-            // ALORS on obtient I
-            Assert.Equal("I",resultat);
-        }
-        [Fact]
-        public void Test2()
-        {
-            // ETANT DONNE un nombre 2
-            const int nombreArabe = 2;
-            // QUAND on le convertit en nombres romains
-            var resultat = ConvertisseurNombreRomains.Convertir(nombreArabe);
+        //    // ALORS on obtient I
+        //    Assert.Equal("I",resultat);
+        //}
+        //[Fact]
+        //public void Test2()
+        //{
+        //    // ETANT DONNE un nombre 2
+        //    const int nombreArabe = 2;
+        //    // QUAND on le convertit en nombres romains
+        //    var resultat = ConvertisseurNombreRomains.Convertir(nombreArabe);
 
-            // ALORS on obtient II
-            Assert.Equal("II", resultat);
-        }
-        [Fact]
-        public void Test3()
-        {
-            // ETANT DONNE un nombre 3
-            const int nombreArabe = 3;
-            // QUAND on le convertit en nombres romains
-            var resultat = ConvertisseurNombreRomains.Convertir(nombreArabe);
+        //    // ALORS on obtient II
+        //    Assert.Equal("II", resultat);
+        //}
+        //[Fact]
+        //public void Test3()
+        //{
+        //    // ETANT DONNE un nombre 3
+        //    const int nombreArabe = 3;
+        //    // QUAND on le convertit en nombres romains
+        //    var resultat = ConvertisseurNombreRomains.Convertir(nombreArabe);
 
-            // ALORS on obtient III
-            Assert.Equal("III", resultat);
-        }
+        //    // ALORS on obtient III
+        //    Assert.Equal("III", resultat);
+        //} test plus nécessaire donc mis en commentaire
         [Theory]
         [InlineData(1)]
         [InlineData(2)]
@@ -70,6 +70,17 @@ namespace NombresRomains.Test
 
             // ALORS on obtient V
             Assert.Equal("V", resultat);
+        }
+        [Fact]
+        public void Test6()
+        {
+            // ETANT DONNE un nombre 6
+            const int nombreArabe = 6;
+            // QUAND on le convertit en nombres romains
+            var resultat = ConvertisseurNombreRomains.Convertir(nombreArabe);
+
+            // ALORS on obtient VI
+            Assert.Equal("VI", resultat);
         }
     }
 }
