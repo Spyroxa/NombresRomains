@@ -25,6 +25,7 @@
                 15 => "XV",
                 16 => "XVI",
                 17 => "XVII",
+                18 => "XVIII",
                 _ => throw new NotImplementedException()
             };
     }
