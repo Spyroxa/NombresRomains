@@ -131,53 +131,68 @@ namespace NombresRomains.Test
             // ALORS on obtient 'IX'
             Assert.Equal("IX", resultat);
         }
-        [Fact]
-        public void Test10()
-        {
-            // ETANT DONNE le nombre 10
-            const int nombreArabe = 10;
+        //[Fact]
+        //public void Test10()
+        //{
+        //    // ETANT DONNE le nombre 10
+        //    const int nombreArabe = 10;
 
+        //    // QUAND on le convertit en nombres romains
+        //    var resultat = ConvertisseurNombreRomains.Convertir(nombreArabe);
+
+        //    // ALORS on obtient 'X'
+        //    Assert.Equal("X", resultat);
+        //}
+        //[Fact]
+        //public void Test11()
+        //{
+        //    // ETANT DONNE le nombre 11
+        //    const int nombreArabe = 11;
+
+        //    // QUAND on le convertit en nombres romains
+        //    var resultat = ConvertisseurNombreRomains.Convertir(nombreArabe);
+
+        //    // ALORS on obtient 'XI'
+        //    Assert.Equal("XI", resultat);
+        //}
+        //[Fact]
+        //public void Test12()
+        //{
+        //    // ETANT DONNE le nombre 12
+        //    const int nombreArabe = 12;
+
+        //    // QUAND on le convertit en nombres romains
+        //    var resultat = ConvertisseurNombreRomains.Convertir(nombreArabe);
+
+        //    // ALORS on obtient 'XII'
+        //    Assert.Equal("XII", resultat);
+        //}
+        //[Fact]
+        //public void Test13()
+        //{
+        //    // ETANT DONNE le nombre 13
+        //    const int nombreArabe = 13;
+
+        //    // QUAND on le convertit en nombres romains
+        //    var resultat = ConvertisseurNombreRomains.Convertir(nombreArabe);
+
+        //    // ALORS on obtient 'XIII'
+        //    Assert.Equal("XIII", resultat);
+        //} plus utile
+        [Theory]
+        [InlineData(10)]
+        [InlineData(11)]
+        [InlineData(12)]
+        [InlineData(13)]
+        public void TestDixPlusUnité(int nombreArabe)
+        {
+            // ETANT DONNE un nombre <nombreArabe> compris entre 10 et 10
             // QUAND on le convertit en nombres romains
             var resultat = ConvertisseurNombreRomains.Convertir(nombreArabe);
 
-            // ALORS on obtient 'X'
-            Assert.Equal("X", resultat);
-        }
-        [Fact]
-        public void Test11()
-        {
-            // ETANT DONNE le nombre 11
-            const int nombreArabe = 11;
-
-            // QUAND on le convertit en nombres romains
-            var resultat = ConvertisseurNombreRomains.Convertir(nombreArabe);
-
-            // ALORS on obtient 'XI'
-            Assert.Equal("XI", resultat);
-        }
-        [Fact]
-        public void Test12()
-        {
-            // ETANT DONNE le nombre 12
-            const int nombreArabe = 12;
-
-            // QUAND on le convertit en nombres romains
-            var resultat = ConvertisseurNombreRomains.Convertir(nombreArabe);
-
-            // ALORS on obtient 'XII'
-            Assert.Equal("XII", resultat);
-        }
-        [Fact]
-        public void Test13()
-        {
-            // ETANT DONNE le nombre 13
-            const int nombreArabe = 13;
-
-            // QUAND on le convertit en nombres romains
-            var resultat = ConvertisseurNombreRomains.Convertir(nombreArabe);
-
-            // ALORS on obtient 'XIII'
-            Assert.Equal("XIII", resultat);
+            // ALORS on obtient 'X' plus <nombreArabe - 10> fois 'I'
+            var attendu = 'X' + new string('I', nombreArabe - 10);
+            Assert.Equal(attendu, resultat);
         }
     }
 }
