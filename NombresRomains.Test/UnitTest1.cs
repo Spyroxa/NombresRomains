@@ -282,54 +282,54 @@ namespace NombresRomains.Test
             // ALORS on obtient 'XIX'
             Assert.Equal("XIX", resultat);
         }
-        [Fact]
-        public void Test20()
-        {
-            // ETANT DONNE le nombre 20
-            const int nombreArabe = 20;
+        //[Fact]
+        //public void Test20()
+        //{
+        //    // ETANT DONNE le nombre 20
+        //    const int nombreArabe = 20;
 
-            // QUAND on le convertit en nombres romains
-            var resultat = ConvertisseurNombreRomains.Convertir(nombreArabe);
+        //    // QUAND on le convertit en nombres romains
+        //    var resultat = ConvertisseurNombreRomains.Convertir(nombreArabe);
 
-            // ALORS on obtient 'XX'
-            Assert.Equal("XX", resultat);
-        }
-        [Fact]
-        public void Test21()
-        {
-            // ETANT DONNE le nombre 21
-            const int nombreArabe = 21;
+        //    // ALORS on obtient 'XX'
+        //    Assert.Equal("XX", resultat);
+        //}
+        //[Fact]
+        //public void Test21()
+        //{
+        //    // ETANT DONNE le nombre 21
+        //    const int nombreArabe = 21;
 
-            // QUAND on le convertit en nombres romains
-            var resultat = ConvertisseurNombreRomains.Convertir(nombreArabe);
+        //    // QUAND on le convertit en nombres romains
+        //    var resultat = ConvertisseurNombreRomains.Convertir(nombreArabe);
 
-            // ALORS on obtient 'XXI'
-            Assert.Equal("XXI", resultat);
-        }
-        [Fact]
-        public void Test22()
-        {
-            // ETANT DONNE le nombre 22
-            const int nombreArabe = 22;
+        //    // ALORS on obtient 'XXI'
+        //    Assert.Equal("XXI", resultat);
+        //}
+        //[Fact]
+        //public void Test22()
+        //{
+        //    // ETANT DONNE le nombre 22
+        //    const int nombreArabe = 22;
 
-            // QUAND on le convertit en nombres romains
-            var resultat = ConvertisseurNombreRomains.Convertir(nombreArabe);
+        //    // QUAND on le convertit en nombres romains
+        //    var resultat = ConvertisseurNombreRomains.Convertir(nombreArabe);
 
-            // ALORS on obtient 'XXII'
-            Assert.Equal("XXII", resultat);
-        }
-        [Fact]
-        public void Test23()
-        {
-            // ETANT DONNE le nombre 23
-            const int nombreArabe = 23;
+        //    // ALORS on obtient 'XXII'
+        //    Assert.Equal("XXII", resultat);
+        //}
+        //[Fact]
+        //public void Test23()
+        //{
+        //    // ETANT DONNE le nombre 23
+        //    const int nombreArabe = 23;
 
-            // QUAND on le convertit en nombres romains
-            var resultat = ConvertisseurNombreRomains.Convertir(nombreArabe);
+        //    // QUAND on le convertit en nombres romains
+        //    var resultat = ConvertisseurNombreRomains.Convertir(nombreArabe);
 
-            // ALORS on obtient 'XXIII'
-            Assert.Equal("XXIII", resultat);
-        }
+        //    // ALORS on obtient 'XXIII'
+        //    Assert.Equal("XXIII", resultat);
+        //} plus utile
         [Theory]
         [InlineData(20)]
         [InlineData(21)]
@@ -344,6 +344,18 @@ namespace NombresRomains.Test
             // ALORS on obtient "XX" plus <nombreArabe - 20> fois 'I'
             var attendu = "XX" + new string('I', nombreArabe - 20);
             Assert.Equal(attendu, resultat);
+        }
+        [Fact]
+        public void Test24()
+        {
+            // ETANT DONNE le nombre 24
+            const int nombreArabe = 24;
+
+            // QUAND on le convertit en nombres romains
+            var resultat = ConvertisseurNombreRomains.Convertir(nombreArabe);
+
+            // ALORS on obtient 'XXIV'
+            Assert.Equal("XXIV", resultat);
         }
     }
 }
