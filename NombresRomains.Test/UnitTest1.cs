@@ -405,5 +405,32 @@ namespace NombresRomains.Test
             // ALORS on obtient 'XXVIII'
             Assert.Equal("XXVIII", resultat);
         }
+        [Theory]
+        [InlineData(25)]
+        [InlineData(26)]
+        [InlineData(27)]
+        [InlineData(28)]
+        public void TestVingCinqPlusUnité(int nombreArabe)
+        {
+            // ETANT DONNE un nombre <nombreArabe> compris entre 25 et 28
+            // QUAND on le convertit en nombres romains
+            var resultat = ConvertisseurNombreRomains.Convertir(nombreArabe);
+
+            // ALORS on obtient "XXV" plus <nombreArabe - 25> fois 'I'
+            var attendu = "XXV" + new string('I', nombreArabe - 25);
+            Assert.Equal(attendu, resultat);
+        }
+        [Fact]
+        public void Test29()
+        {
+            // ETANT DONNE le nombre 29
+            const int nombreArabe = 29;
+
+            // QUAND on le convertit en nombres romains
+            var resultat = ConvertisseurNombreRomains.Convertir(nombreArabe);
+
+            // ALORS on obtient 'XXIX'
+            Assert.Equal("XXIX", resultat);
+        }
     }
 }
