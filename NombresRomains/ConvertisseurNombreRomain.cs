@@ -19,6 +19,7 @@
                 10 => "X",
                 11 => "XI",
                 12 => "XII",
+                13 => "XIII",
                 _ => throw new NotImplementedException()
             };
     }
