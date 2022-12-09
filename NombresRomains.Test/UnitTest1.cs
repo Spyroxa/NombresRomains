@@ -30,21 +30,7 @@ namespace NombresRomains.Test
             Assert.Equal("IV", resultat);
         }
 
-        //[Theory]
-        //[InlineData(5)]
-        //[InlineData(6)]
-        //[InlineData(7)]
-        //[InlineData(8)]
-        //public void TestCinqPlusUnité(int nombreArabe)
-        //{
-        //    // ETANT DONNE un nombre <nombreArabe> compris entre 5 et 8
-        //    // QUAND on le convertit en nombres romains
-        //    var resultat = ConvertisseurNombreRomains.Convertir(nombreArabe);
 
-        //    // ALORS on obtient 'V' plus <nombreArabe - 5> fois 'I'
-        //    var attendu = 'V' + new string('I', nombreArabe - 5);
-        //    Assert.Equal(attendu, resultat);
-        //}
 
         [Fact]
         public void Test9()
@@ -59,21 +45,6 @@ namespace NombresRomains.Test
             Assert.Equal("IX", resultat);
         }
 
-        //[Theory]
-        //[InlineData(10)]
-        //[InlineData(11)]
-        //[InlineData(12)]
-        //[InlineData(13)]
-        //public void TestDixPlusUnité(int nombreArabe)
-        //{
-        //    // ETANT DONNE un nombre <nombreArabe> compris entre 10 et 10
-        //    // QUAND on le convertit en nombres romains
-        //    var resultat = ConvertisseurNombreRomains.Convertir(nombreArabe);
-
-        //    // ALORS on obtient 'X' plus <nombreArabe - 10> fois 'I'
-        //    var attendu = 'X' + new string('I', nombreArabe - 10);
-        //    Assert.Equal(attendu, resultat);
-        //}
 
         [Fact]
         public void Test14()
@@ -88,22 +59,6 @@ namespace NombresRomains.Test
             Assert.Equal("XIV", resultat);
         }
 
-        //[Theory]
-        //[InlineData(15)]
-        //[InlineData(16)]
-        //[InlineData(17)]
-        //[InlineData(18)]
-        //public void TestQuinzePlusUnité(int nombreArabe)
-        //{
-        //    // ETANT DONNE un nombre <nombreArabe> compris entre 15 et 18
-        //    // QUAND on le convertit en nombres romains
-        //    var resultat = ConvertisseurNombreRomains.Convertir(nombreArabe);
-
-        //    // ALORS on obtient "XV" plus <nombreArabe - 15> fois 'I'
-        //    var attendu = "XV" + new string('I', nombreArabe - 15);
-        //    Assert.Equal(attendu, resultat);
-        //}
-
         [Fact]
         public void Test19()
         {
@@ -117,21 +72,6 @@ namespace NombresRomains.Test
             Assert.Equal("XIX", resultat);
         }
 
-        //[Theory]
-        //[InlineData(20)]
-        //[InlineData(21)]
-        //[InlineData(22)]
-        //[InlineData(23)]
-        //public void TestVingPlusUnité(int nombreArabe)
-        //{
-        //    // ETANT DONNE un nombre <nombreArabe> compris entre 20 et 23
-        //    // QUAND on le convertit en nombres romains
-        //    var resultat = ConvertisseurNombreRomains.Convertir(nombreArabe);
-
-        //    // ALORS on obtient "XX" plus <nombreArabe - 20> fois 'I'
-        //    var attendu = "XX" + new string('I', nombreArabe - 20);
-        //    Assert.Equal(attendu, resultat);
-        //}
 
         [Fact]
         public void Test24()
@@ -146,21 +86,6 @@ namespace NombresRomains.Test
             Assert.Equal("XXIV", resultat);
         }
 
-        //[Theory]
-        //[InlineData(25)]
-        //[InlineData(26)]
-        //[InlineData(27)]
-        //[InlineData(28)]
-        //public void TestVingCinqPlusUnité(int nombreArabe)
-        //{
-        //    // ETANT DONNE un nombre <nombreArabe> compris entre 25 et 28
-        //    // QUAND on le convertit en nombres romains
-        //    var resultat = ConvertisseurNombreRomains.Convertir(nombreArabe);
-
-        //    // ALORS on obtient "XXV" plus <nombreArabe - 25> fois 'I'
-        //    var attendu = "XXV" + new string('I', nombreArabe - 25);
-        //    Assert.Equal(attendu, resultat);
-        //}
 
         [Fact]
         public void Test29()
