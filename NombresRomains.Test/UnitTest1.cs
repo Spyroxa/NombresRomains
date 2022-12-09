@@ -35,5 +35,19 @@ namespace NombresRomains.Test
             // ALORS on obtient III
             Assert.Equal("III", resultat);
         }
+        [Theory]
+        [InlineData(1)]
+        [InlineData(2)]
+        [InlineData(3)]
+        public void TestUnités(int n)
+        {
+            // ETANT DONNE un nombre <n> compris entre 1 et 3
+            // QUAND on le convertit en nombres romains
+            var resultat = ConvertisseurNombreRomains.Convertir(n);
+
+            // ALORS on obtient <n> fois 'I'
+            var attendu = new string('I', n);
+            Assert.Equal(attendu, resultat);
+        }
     }
 }
