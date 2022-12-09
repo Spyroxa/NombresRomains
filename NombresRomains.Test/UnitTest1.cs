@@ -60,49 +60,64 @@ namespace NombresRomains.Test
             // ALORS on obtient IV
             Assert.Equal("IV", resultat);
         }
-        [Fact]
-        public void Test5()
+        //[Fact]
+        //public void Test5()
+        //{
+        //    // ETANT DONNE un nombre 5
+        //    const int nombreArabe = 5;
+        //    // QUAND on le convertit en nombres romains
+        //    var resultat = ConvertisseurNombreRomains.Convertir(nombreArabe);
+
+        //    // ALORS on obtient V
+        //    Assert.Equal("V", resultat);
+        //}
+        //[Fact]
+        //public void Test6()
+        //{
+        //    // ETANT DONNE un nombre 6
+        //    const int nombreArabe = 6;
+        //    // QUAND on le convertit en nombres romains
+        //    var resultat = ConvertisseurNombreRomains.Convertir(nombreArabe);
+
+        //    // ALORS on obtient VI
+        //    Assert.Equal("VI", resultat);
+        //}
+        //[Fact]
+        //public void Test7()
+        //{
+        //    // ETANT DONNE un nombre 7
+        //    const int nombreArabe = 7;
+        //    // QUAND on le convertit en nombres romains
+        //    var resultat = ConvertisseurNombreRomains.Convertir(nombreArabe);
+
+        //    // ALORS on obtient VII
+        //    Assert.Equal("VII", resultat);
+        //}
+        //[Fact]
+        //public void Test8()
+        //{
+        //    // ETANT DONNE un nombre 8
+        //    const int nombreArabe = 8;
+        //    // QUAND on le convertit en nombres romains
+        //    var resultat = ConvertisseurNombreRomains.Convertir(nombreArabe);
+
+        //    // ALORS on obtient VIII
+        //    Assert.Equal("VIII", resultat);
+        //} plus utile donc mis en commentaire pour le moment
+        [Theory]
+        [InlineData(5)]
+        [InlineData(6)]
+        [InlineData(7)]
+        [InlineData(8)]
+        public void TestCinqPlusUnité(int nombreArabe)
         {
-            // ETANT DONNE un nombre 5
-            const int nombreArabe = 5;
+            // ETANT DONNE un nombre <nombreArabe> compris entre 5 et 8
             // QUAND on le convertit en nombres romains
             var resultat = ConvertisseurNombreRomains.Convertir(nombreArabe);
 
-            // ALORS on obtient V
-            Assert.Equal("V", resultat);
-        }
-        [Fact]
-        public void Test6()
-        {
-            // ETANT DONNE un nombre 6
-            const int nombreArabe = 6;
-            // QUAND on le convertit en nombres romains
-            var resultat = ConvertisseurNombreRomains.Convertir(nombreArabe);
-
-            // ALORS on obtient VI
-            Assert.Equal("VI", resultat);
-        }
-        [Fact]
-        public void Test7()
-        {
-            // ETANT DONNE un nombre 7
-            const int nombreArabe = 7;
-            // QUAND on le convertit en nombres romains
-            var resultat = ConvertisseurNombreRomains.Convertir(nombreArabe);
-
-            // ALORS on obtient VII
-            Assert.Equal("VII", resultat);
-        }
-        [Fact]
-        public void Test8()
-        {
-            // ETANT DONNE un nombre 8
-            const int nombreArabe = 8;
-            // QUAND on le convertit en nombres romains
-            var resultat = ConvertisseurNombreRomains.Convertir(nombreArabe);
-
-            // ALORS on obtient VIII
-            Assert.Equal("VIII", resultat);
+            // ALORS on obtient 'V' plus <nombreArabe - 5> fois 'I'
+            var attendu = 'V' + new string('I', nombreArabe - 5);
+            Assert.Equal(attendu, resultat);
         }
     }
 }
