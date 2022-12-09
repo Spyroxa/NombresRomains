@@ -30,6 +30,7 @@
                 19 => "XIX",
                 20 => "XX",
                 21 => "XXI",
+                22 => "XXII",
                 _ => throw new NotImplementedException()
             };
     }
