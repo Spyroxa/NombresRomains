@@ -36,6 +36,7 @@
                 24 => "XXIV",
                 25 => "XXV",
                 26 => "XXVI",
+                27 => "XXVII",
                 _ => throw new NotImplementedException()
             };
     }
