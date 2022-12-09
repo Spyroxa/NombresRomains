@@ -270,5 +270,17 @@ namespace NombresRomains.Test
             var attendu = "XV" + new string('I', nombreArabe - 15);
             Assert.Equal(attendu, resultat);
         }
+        [Fact]
+        public void Test19()
+        {
+            // ETANT DONNE le nombre 19
+            const int nombreArabe = 19;
+
+            // QUAND on le convertit en nombres romains
+            var resultat = ConvertisseurNombreRomains.Convertir(nombreArabe);
+
+            // ALORS on obtient 'XIX'
+            Assert.Equal("XIX", resultat);
+        }
     }
 }
