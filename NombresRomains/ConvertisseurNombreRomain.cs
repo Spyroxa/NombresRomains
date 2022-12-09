@@ -28,10 +28,11 @@
                 //18 => "XVIII",
                 <= 18 => "X" + "V" + UnitéRomaine.Unité.Représenter(nombreArabe - 15),
                 19 => "XIX",
-                20 => "XX",
-                21 => "XXI",
-                22 => "XXII",
-                23 => "XXIII",
+                //20 => "XX",
+                //21 => "XXI",
+                //22 => "XXII",
+                //23 => "XXIII",
+                <= 23 => "X" + "X" + UnitéRomaine.Unité.Représenter(nombreArabe - 20),
                 _ => throw new NotImplementedException()
             };
     }

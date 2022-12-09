@@ -330,5 +330,20 @@ namespace NombresRomains.Test
             // ALORS on obtient 'XXIII'
             Assert.Equal("XXIII", resultat);
         }
+        [Theory]
+        [InlineData(20)]
+        [InlineData(21)]
+        [InlineData(22)]
+        [InlineData(23)]
+        public void TestVingPlusUnité(int nombreArabe)
+        {
+            // ETANT DONNE un nombre <nombreArabe> compris entre 20 et 23
+            // QUAND on le convertit en nombres romains
+            var resultat = ConvertisseurNombreRomains.Convertir(nombreArabe);
+
+            // ALORS on obtient "XX" plus <nombreArabe - 20> fois 'I'
+            var attendu = "XX" + new string('I', nombreArabe - 20);
+            Assert.Equal(attendu, resultat);
+        }
     }
 }
