@@ -93,5 +93,16 @@ namespace NombresRomains.Test
             // ALORS on obtient VII
             Assert.Equal("VII", resultat);
         }
+        [Fact]
+        public void Test8()
+        {
+            // ETANT DONNE un nombre 8
+            const int nombreArabe = 8;
+            // QUAND on le convertit en nombres romains
+            var resultat = ConvertisseurNombreRomains.Convertir(nombreArabe);
+
+            // ALORS on obtient VIII
+            Assert.Equal("VIII", resultat);
+        }
     }
 }
