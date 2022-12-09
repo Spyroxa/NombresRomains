@@ -218,6 +218,18 @@ namespace NombresRomains.Test
             // ALORS on obtient 'XV'
             Assert.Equal("XV", resultat);
         }
+        [Fact]
+        public void Test16()
+        {
+            // ETANT DONNE le nombre 16
+            const int nombreArabe = 16;
+
+            // QUAND on le convertit en nombres romains
+            var resultat = ConvertisseurNombreRomains.Convertir(nombreArabe);
+
+            // ALORS on obtient 'XVI'
+            Assert.Equal("XVI", resultat);
+        }
 
     }
 }
