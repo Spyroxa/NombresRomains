@@ -206,53 +206,69 @@ namespace NombresRomains.Test
             // ALORS on obtient 'XIV'
             Assert.Equal("XIV", resultat);
         }
-        [Fact]
-        public void Test15()
-        {
-            // ETANT DONNE le nombre 15
-            const int nombreArabe = 15;
+        //[Fact]
+        //public void Test15()
+        //{
+        //    // ETANT DONNE le nombre 15
+        //    const int nombreArabe = 15;
 
+        //    // QUAND on le convertit en nombres romains
+        //    var resultat = ConvertisseurNombreRomains.Convertir(nombreArabe);
+
+        //    // ALORS on obtient 'XV'
+        //    Assert.Equal("XV", resultat);
+        //}
+        //[Fact]
+        //public void Test16()
+        //{
+        //    // ETANT DONNE le nombre 16
+        //    const int nombreArabe = 16;
+
+        //    // QUAND on le convertit en nombres romains
+        //    var resultat = ConvertisseurNombreRomains.Convertir(nombreArabe);
+
+        //    // ALORS on obtient 'XVI'
+        //    Assert.Equal("XVI", resultat);
+        //}
+        //[Fact]
+        //public void Test17()
+        //{
+        //    // ETANT DONNE le nombre 17
+        //    const int nombreArabe = 17;
+
+        //    // QUAND on le convertit en nombres romains
+        //    var resultat = ConvertisseurNombreRomains.Convertir(nombreArabe);
+
+        //    // ALORS on obtient 'XVII'
+        //    Assert.Equal("XVII", resultat);
+        //}
+        //[Fact]
+        //public void Test18()
+        //{
+        //    // ETANT DONNE le nombre 18
+        //    const int nombreArabe = 18;
+
+        //    // QUAND on le convertit en nombres romains
+        //    var resultat = ConvertisseurNombreRomains.Convertir(nombreArabe);
+
+        //    // ALORS on obtient 'XVIII'
+        //    Assert.Equal("XVIII", resultat);
+        //} plus utile
+
+        [Theory]
+        [InlineData(15)]
+        [InlineData(16)]
+        [InlineData(17)]
+        [InlineData(18)]
+        public void TestQuinzePlusUnité(int nombreArabe)
+        {
+            // ETANT DONNE un nombre <nombreArabe> compris entre 15 et 18
             // QUAND on le convertit en nombres romains
             var resultat = ConvertisseurNombreRomains.Convertir(nombreArabe);
 
-            // ALORS on obtient 'XV'
-            Assert.Equal("XV", resultat);
-        }
-        [Fact]
-        public void Test16()
-        {
-            // ETANT DONNE le nombre 16
-            const int nombreArabe = 16;
-
-            // QUAND on le convertit en nombres romains
-            var resultat = ConvertisseurNombreRomains.Convertir(nombreArabe);
-
-            // ALORS on obtient 'XVI'
-            Assert.Equal("XVI", resultat);
-        }
-        [Fact]
-        public void Test17()
-        {
-            // ETANT DONNE le nombre 17
-            const int nombreArabe = 17;
-
-            // QUAND on le convertit en nombres romains
-            var resultat = ConvertisseurNombreRomains.Convertir(nombreArabe);
-
-            // ALORS on obtient 'XVII'
-            Assert.Equal("XVII", resultat);
-        }
-        [Fact]
-        public void Test18()
-        {
-            // ETANT DONNE le nombre 18
-            const int nombreArabe = 18;
-
-            // QUAND on le convertit en nombres romains
-            var resultat = ConvertisseurNombreRomains.Convertir(nombreArabe);
-
-            // ALORS on obtient 'XVIII'
-            Assert.Equal("XVIII", resultat);
+            // ALORS on obtient "XV" plus <nombreArabe - 15> fois 'I'
+            var attendu = "XV" + new string('I', nombreArabe - 15);
+            Assert.Equal(attendu, resultat);
         }
     }
 }
