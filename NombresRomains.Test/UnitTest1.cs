@@ -230,6 +230,17 @@ namespace NombresRomains.Test
             // ALORS on obtient 'XVI'
             Assert.Equal("XVI", resultat);
         }
+        [Fact]
+        public void Test17()
+        {
+            // ETANT DONNE le nombre 17
+            const int nombreArabe = 17;
 
+            // QUAND on le convertit en nombres romains
+            var resultat = ConvertisseurNombreRomains.Convertir(nombreArabe);
+
+            // ALORS on obtient 'XVII'
+            Assert.Equal("XVII", resultat);
+        }
     }
 }
