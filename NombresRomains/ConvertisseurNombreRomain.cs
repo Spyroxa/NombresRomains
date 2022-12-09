@@ -22,6 +22,7 @@
                 //13 => "XIII",
                 <= 13 => "X" + UnitéRomaine.Unité.Représenter(nombreArabe -10),
                 14 => "XIV",
+                15 => "XV",
                 _ => throw new NotImplementedException()
             };
     }
