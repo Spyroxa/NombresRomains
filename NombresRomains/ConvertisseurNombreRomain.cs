@@ -29,6 +29,7 @@
                 <= 18 => "X" + "V" + UnitéRomaine.Unité.Représenter(nombreArabe - 15),
                 19 => "XIX",
                 20 => "XX",
+                21 => "XXI",
                 _ => throw new NotImplementedException()
             };
     }
