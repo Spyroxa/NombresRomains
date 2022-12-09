@@ -143,5 +143,17 @@ namespace NombresRomains.Test
             // ALORS on obtient 'X'
             Assert.Equal("X", resultat);
         }
+        [Fact]
+        public void Test11()
+        {
+            // ETANT DONNE le nombre 11
+            const int nombreArabe = 11;
+
+            // QUAND on le convertit en nombres romains
+            var resultat = ConvertisseurNombreRomains.Convertir(nombreArabe);
+
+            // ALORS on obtient 'XI'
+            Assert.Equal("XI", resultat);
+        }
     }
 }
