@@ -10,6 +10,7 @@
                 //3 => "III",
                 <= 3 => UnitéRomaine.Unité.Représenter(nombreArabe),
                 4 => "IV",
+                5 => "V",
                 _ => throw new NotImplementedException()
             };
     }
