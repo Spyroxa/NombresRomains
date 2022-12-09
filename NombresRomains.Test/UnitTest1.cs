@@ -49,5 +49,16 @@ namespace NombresRomains.Test
             var attendu = new string('I', n);
             Assert.Equal(attendu, resultat);
         }
+        [Fact]
+        public void Test4()
+        {
+            // ETANT DONNE un nombre 4
+            const int nombreArabe = 4;
+            // QUAND on le convertit en nombres romains
+            var resultat = ConvertisseurNombreRomains.Convertir(nombreArabe);
+
+            // ALORS on obtient IV
+            Assert.Equal("IV", resultat);
+        }
     }
 }
